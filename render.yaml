@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: preplens-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGODB_URI
+        value: your_mongodb_uri_here
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    plan: free
